@@ -1,0 +1,199 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indoria University</title>
+     <link rel="icon" href="img2/iu_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    /* General page settings */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(135deg, #0044cc, #0066ff);
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+            background-size: 3em 3em;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { background-position: 0 0; }
+            100% { background-position: 3em 3em; }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation styling */
+        nav {
+            margin-top: 1.5rem;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* About section styling */
+        .about-section {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 3rem;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .about-section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #0044cc;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.2em;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #0044cc, #0066ff);
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            margin: 2rem 0 1.5rem;
+            border-bottom: 2px solid #0044cc;
+            padding-bottom: 0.8rem;
+            font-size: 1.6em;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-size: 1.2em;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1.2rem;
+            padding: 1.2rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #0044cc;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        li:hover {
+            transform: translateX(10px);
+            background-color: #f0f4ff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        strong {
+            color: #0044cc;
+            margin-right: 0.8rem;
+            font-size: 1.1em;
+            display: inline-block;
+            position: relative;
+        }
+
+        strong::after {
+            content: '→';
+            margin-left: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        li:hover strong::after {
+            opacity: 1;
+        }
+        
+        /* Logo styling */
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img2/iu_logo.png" alt="Indoria University Logo" class="logo">
+        <h1>Welcome to Indoria University</h1>
+        <nav>
+            <a href="about.jsp">About Us</a>
+            <a href="register.jsp">Register</a>
+            <a href="login.jsp">Login</a>
+            <a href="contact.jsp">Contact Us</a>
+        </nav>
+    </header>
+    <section class="about-section">
+        <h2>About Indoria University</h2>
+        <p>Welcome to the official portal of Indoria University...</p>
+    </section>
+</body>
+</html>
